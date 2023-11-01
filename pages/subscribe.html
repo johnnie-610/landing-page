@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/subscribe.css">
+    <title>subscription form</title>
+</head>
+<body>
+    <div class="main">
+        <div class="title"><p>Please fill out the form Below to subscribe to our Newsletter</p></div>
+        <form action="post">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name" autocapitalize="words" autofocus aria-autocomplete="both">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email">
+            <label for="need">Interests</label>
+            <input type="text" name="need" id="need" placeholder="Enter your interests">
+            <input type="checkbox" name="terms" id="checkbox" required>
+            <label for="checkbox">I agree to the terms and conditions</label>
+            <input type="checkbox" name="news" id="news">
+            <label for="news">I would like to receive news and updates</label>
+            <button>Subscribe</button>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const need = document.querySelector('#need');
+        const checkbox = document.querySelector('#checkbox');
+        const news = document.querySelector('#news');
+
+        form.addEventListener('submit', (e) => {
+            if(need && news){
+                alert("Dear " + name.value + ", Thank you for subscribing to our newsletter. Your interests have been saved. You will receive updates from us. Don't worry, we won't spam you.");
+            }else{
+                alert("Dear " + name.value + ", Thank you for subscribing to our newsletter. Don't worry, we won't spam you.");
+            }
+            // redirect to home page
+            window.location.href = '../index.html';
+            e.preventDefault();
+            
+        })
+        
+
+    </script>
+    
+</body>
+</html>
