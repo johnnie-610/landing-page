@@ -11,15 +11,28 @@ header{
     display: flex;
     flex-direction: row;
     align-items: top;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 0%;
     flex: auto;
+    background-color: darkgray;
+}
+
+#logo {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0%;
+    width: auto;
+    padding-bottom: 0%;
+    border: red solid;
+    text-align: center;
+    justify-content: center;
+
 }
 
 #header-text {
     padding-top: 0%;
     display: flex;
-    border: solid red 2px;
     align-self: flex-start;
     align-items: top;
 }
@@ -60,16 +73,15 @@ footer {
     display: flex;
     flex-direction: column;
     flex: auto;
-
+    background-color: #00f;
+    border-radius: 10px;
 }
 
 .footer-signup {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-radius: 10px;
     padding: 10px;
-    background: blue;
     align-items: center;
     text-align: center;
     font-size: 48px;
@@ -78,7 +90,6 @@ footer {
 }
 
 .footer-signup button {
-    background: #00f;
     border-radius: 10px;
     font-size: 48px;
     color: #000;
@@ -120,4 +131,71 @@ main {
 
 .bottom-nav a:hover{
     color: #00f;
+}
+
+/* occupy 60% of the screen to the left */
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.aside q {
+    color: red;
+    font-size: 20px;
+}
+
+.aside h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+.aside p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#main-title {
+    /* make title occupy entire width */
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: red;
+    text-align: center;
+
+}
+
+/* style ad to have border and text ad here at the center of the box */
+.ad {
+    display: flex;
+    justify-content: center;
+    padding: 120px;
+    font-size: 12px;
+    font-style: italic;
+    border: solid blue 2px;
+}
+
+#ad p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid blue 2px;
 }
